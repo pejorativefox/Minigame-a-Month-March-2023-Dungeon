@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpcu361f26cv7"]
+
+[ext_resource type="Texture2D" uid="uid://dlw34wy17fbfg" path="res://Data/Tiles/Sheet.png" id="1_3yl6d"]
+
+[node name="Door" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3yl6d")
+region_enabled = true
+region_rect = Rect2(32, 16, 16, 16)

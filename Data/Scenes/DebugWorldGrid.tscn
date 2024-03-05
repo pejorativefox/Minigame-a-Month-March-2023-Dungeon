@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cehw5nu3gb2pr"]
+
+[ext_resource type="Script" path="res://Data/Scripts/DebugWorldGrid.gd" id="1_a0k8j"]
+
+[node name="DebugWorldGrid" type="Node2D"]
+script = ExtResource("1_a0k8j")
+repeatX = null
+repeatY = null

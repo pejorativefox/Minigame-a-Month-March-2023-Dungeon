@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b266c2yqq4mx6"]
+
+[ext_resource type="Texture2D" uid="uid://dlw34wy17fbfg" path="res://Data/Tiles/Sheet.png" id="1_6poul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hy28"]
+size = Vector2(14, 14)
+
+[node name="Wall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_6poul")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_1hy28")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="TileSet" path="res://Data/Tiles/MainTileset.tres" id="1_af03i"]
+
+[node name="_TileMap_2" type="TileMap"]
+position = Vector2(100, 100)
+tile_set = ExtResource("1_af03i")
+format = 2
