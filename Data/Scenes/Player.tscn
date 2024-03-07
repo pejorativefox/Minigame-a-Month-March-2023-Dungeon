@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://hkkm5mv7sbt1"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Player.gd" id="1_s50r0"]
-[ext_resource type="Texture2D" uid="uid://dlw34wy17fbfg" path="res://Data/Tiles/Sheet.png" id="2_vnusu"]
+[ext_resource type="Texture2D" uid="uid://325wbr0ypao6" path="res://Data/Tiles/CharactersSheet.png" id="3_2lga0"]
 [ext_resource type="PackedScene" uid="uid://b64jcsx3wgq8b" path="res://Data/Scenes/Sword.tscn" id="3_vvhua"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7gt6"]
@@ -16,36 +16,46 @@ script = ExtResource("1_s50r0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_u7gt6")
 
+[node name="Sword" parent="." instance=ExtResource("3_vvhua")]
+position = Vector2(3, 0)
+scale = Vector2(1, 1)
+
 [node name="DownSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_vnusu")
+texture = ExtResource("3_2lga0")
 region_enabled = true
-region_rect = Rect2(0, 32, 16, 16)
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="UpSprite" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-texture = ExtResource("2_vnusu")
+texture = ExtResource("3_2lga0")
 region_enabled = true
-region_rect = Rect2(32, 32, 16, 16)
+region_rect = Rect2(32, 0, 16, 16)
 
 [node name="LeftSprite" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-texture = ExtResource("2_vnusu")
+texture = ExtResource("3_2lga0")
 flip_h = true
 region_enabled = true
-region_rect = Rect2(16, 32, 16, 16)
+region_rect = Rect2(16, 0, 16, 16)
 
 [node name="RightSprite" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-texture = ExtResource("2_vnusu")
+texture = ExtResource("3_2lga0")
 region_enabled = true
-region_rect = Rect2(16, 32, 16, 16)
-
-[node name="Sword" parent="." instance=ExtResource("3_vvhua")]
-position = Vector2(10, 4)
+region_rect = Rect2(16, 0, 16, 16)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xqdyv")
+
+[node name="Facing" type="Label" parent="."]
+texture_filter = 1
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 5
+text = "Down"

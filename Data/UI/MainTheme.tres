@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bvynuwp2fqvg"]
+
+[ext_resource type="FontFile" uid="uid://cysyvba5qipii" path="res://Data/Fonts/monogram/ttf/monogram.ttf" id="1_4ox62"]
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_4ox62")
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("1_4ox62")
+LineEdit/font_sizes/font_size = 26
+LineEdit/fonts/font = ExtResource("1_4ox62")

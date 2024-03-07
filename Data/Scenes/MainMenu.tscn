@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqbtvsymjyry7"]
+
+[ext_resource type="Script" path="res://Data/Scripts/MainMenu.gd" id="1_rhvyk"]
+[ext_resource type="Theme" uid="uid://bvynuwp2fqvg" path="res://Data/UI/MainTheme.tres" id="2_6dgoj"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_rhvyk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 170.0
+offset_top = 32.0
+offset_right = 258.0
+offset_bottom = 55.0
+theme = ExtResource("2_6dgoj")
+text = "Main Menu"
