@@ -58,7 +58,8 @@ func get_input():
 
 	for k in directionVectorMap:
 		if inputQueue[0] == k:
-			get_node("%sSprite" % k).visible = true
+			var aSprite: AnimatedSprite2D = $"AnimatedSprite2D"
+			aSprite.play("Walk%s" % k)
 		else:
 			get_node("%sSprite" % k).visible = false
 
@@ -66,8 +67,14 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
+	var newX: int = int(round(position.x))
+	var newY: int = int(round(position.y))
+	position = Vector2(newX, newY)
+	var locLabel = $"Loc"
+	locLabel.text = "%s" % position
 
 
 
-
+func _ready():
+	pass
 
